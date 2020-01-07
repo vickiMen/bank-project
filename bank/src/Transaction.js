@@ -12,7 +12,7 @@ class Transaction extends Component {
 
     render() {
         return (
-            <div className='transaction' id={this.props.data._id}>
+            <div className='transaction' style={{color: this.props.color}} id={this.props.data._id}>
                 <div id='amount'>
                     {this.props.data.amount}
                 </div>

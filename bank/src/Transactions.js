@@ -9,10 +9,15 @@ class Transactions extends Component {
     }
 
     render() {
+        
+        this.props.data.forEach( t => {
+            t.amount < 0 ? t.color = 'red' : t.color = 'green'
+        })
+
         return (
-            <div>
+            <div className='transactions'>
                 {this.props.data.map( t => 
-                <Transaction data={t} deleteTransaction={this.props.deleteTransaction}/>)}
+                    <Transaction color={t.color} data={t} deleteTransaction={this.props.deleteTransaction}/>)}
             </div>
         )
     }

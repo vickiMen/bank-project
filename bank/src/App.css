@@ -11,3 +11,26 @@
 .depositBtn {
   cursor: pointer;
 }
+
+.oprBtn {
+  cursor: pointer;
+}
+
+.container {
+  background-color: #E4E9EE;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-gap: 10px;
+  height: 80vh;
+  margin: 15px;
+  grid-template-areas: 
+  'b'
+  't';
+}
+
+.transactions {
+  grid-area: t;
+  display: grid;
+  grid-template-columns: repeat(1,3fr);
+  grid-template-rows: repeat(1,3fr);
+}
